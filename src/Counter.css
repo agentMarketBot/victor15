@@ -1,0 +1,131 @@
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.counter-display {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #333;
+  text-align: center;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.counter-button {
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  min-width: 80px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.counter-button:active {
+  transform: translateY(0);
+}
+
+.counter-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.increment {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.increment:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.decrement {
+  background-color: #f44336;
+  color: white;
+}
+
+.decrement:hover:not(:disabled) {
+  background-color: #da190b;
+}
+
+.reset {
+  background-color: #2196F3;
+  color: white;
+}
+
+.reset:hover:not(:disabled) {
+  background-color: #0b7dda;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .counter-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  
+  .counter-display {
+    font-size: 3rem;
+    min-height: 4rem;
+  }
+  
+  .button-group {
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .counter-button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    min-width: 70px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-display {
+    font-size: 2.5rem;
+    min-height: 3rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .counter-button {
+    width: 100%;
+    min-width: auto;
+  }
+}
