@@ -1,0 +1,178 @@
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.counter-title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.counter-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
+
+.count-value {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.counter-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.counter-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-width: 100px;
+}
+
+.increment-btn {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.increment-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+}
+
+.decrement-btn {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  color: white;
+}
+
+.decrement-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(250, 112, 154, 0.4);
+}
+
+.decrement-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reset-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.reset-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.counter-btn:active {
+  transform: translateY(0);
+}
+
+.counter-btn:focus {
+  outline: 3px solid rgba(102, 126, 234, 0.5);
+  outline-offset: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .counter-title {
+    color: #f1f1f1;
+  }
+  
+  .counter-display {
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+  }
+  
+  .counter-btn {
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .counter-container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .counter-title {
+    font-size: 2rem;
+  }
+  
+  .counter-display {
+    padding: 1.5rem 2rem;
+    min-width: 150px;
+  }
+  
+  .count-value {
+    font-size: 3rem;
+  }
+  
+  .counter-controls {
+    gap: 0.8rem;
+  }
+  
+  .counter-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-container {
+    gap: 1rem;
+  }
+  
+  .counter-title {
+    font-size: 1.8rem;
+  }
+  
+  .counter-display {
+    padding: 1rem 1.5rem;
+    min-width: 120px;
+  }
+  
+  .count-value {
+    font-size: 2.5rem;
+  }
+  
+  .counter-controls {
+    flex-direction: column;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .counter-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
