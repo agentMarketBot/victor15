@@ -1,0 +1,112 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.counter-display {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.counter-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.counter-btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  font-family: inherit;
+}
+
+.increment-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.increment-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.decrement-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.decrement-btn:hover:not(:disabled) {
+  background-color: #da190b;
+  transform: translateY(-2px);
+}
+
+.decrement-btn:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.reset-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #1976D2;
+  transform: translateY(-2px);
+}
+
+.counter-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .counter {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .counter-display {
+    font-size: 3rem;
+  }
+  
+  .counter-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .counter-btn {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-display {
+    font-size: 2.5rem;
+  }
+  
+  .counter-btn {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
